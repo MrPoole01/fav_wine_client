@@ -38,7 +38,7 @@ header h5 {
 
 .field input[type="text"] {
   height: 25px;
-  width: 77%;
+  width: 60%;
   border-radius: 20px;
 }
 
@@ -66,7 +66,8 @@ th, td {
 /* Form */
 
 #form {
-  margin-top: -90px;
+  position: relative;
+  margin-top: -70px;
 }
 
 #info {
@@ -96,7 +97,7 @@ input {
   padding-left: 20px;
   padding-right: 20px;
   margin-top: 20px;
-  margin-left: 55px;
+  margin-left: 0px;
   float: left;
 }
 
@@ -107,7 +108,7 @@ input {
   border-radius: 15px;
   padding-left: 10px;
   padding-right: 10px;
-  margin-top: -30px;
+  margin-top: 0px;
   float: right;
   margin-left: 60px;
 }
