@@ -1,4 +1,4 @@
-var url = 'https://fav-wine-server.herokuapp.com/wine';
+var url = 'https://fav-wine-server.herokuapp.com/';
 
 const search = document.querySelector('.button_1')
 const form = document.querySelector('.button_2')
