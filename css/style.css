@@ -38,7 +38,7 @@ header h5 {
 
 .field input[type="text"] {
   height: 25px;
-  width: 98%;
+  width: 77%;
   border-radius: 20px;
 }
 
@@ -95,7 +95,8 @@ input {
   border-radius: 15px;
   padding-left: 20px;
   padding-right: 20px;
-  margin-top: -5px;
+  margin-top: 20px;
+  margin-left: 55px;
   float: left;
 }
 
@@ -106,7 +107,7 @@ input {
   border-radius: 15px;
   padding-left: 10px;
   padding-right: 10px;
-  margin-top: 0px;
+  margin-top: -30px;
   float: right;
   margin-left: 60px;
 }

@@ -4,6 +4,7 @@ const search = document.querySelector('.button_1')
 const form = document.querySelector('.button_2')
 
 $(document).ready(() => {
+  console.log(url);
   $.get(url)
     .then(getAll)
 })
@@ -41,7 +42,7 @@ if (wine) {
   }
 }
 
-form.addEventListener('submit', submitForm)
+form.addEventListener('click', submitForm)
 
 function submitForm(event) {
   event.preventDefault()
@@ -61,15 +62,16 @@ function submitForm(event) {
 }
 
  function createForm(name, type, year, rating) {
-
    let sending = {
      name: name,
      type: type,
      year: year,
      rating: rating
    }
+   console.log(url, sending);
    $.post(url, sending)
     .then((data) => {
+      console.log(data)
       $.get(url).then(getAll)
     })
  }
