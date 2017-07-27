@@ -7,6 +7,7 @@
   <meta name="author" content="Recardo Poole">
   <title>My Favorite Wines | Be Your Own Wine Expert</title>
   <link rel="stylesheet" href="./css/style.css">
+
 </head>
 
 <body>
@@ -17,21 +18,20 @@
         <h5>Personal Wine List Log</h5>
       </div>
     </div>
-    <nav>
-
-    </nav>
   </header>
+
   <!-- DISPLAY -->
   <section id="display">
     <div class="container">
       <form class="field" action="index.html" method="post">
-        <input type="search" value="search">
+        <input id="searchField" type="text" placeholder="Search">
       </form>
-      <div class="content">
+      <div id="content" style="overflow-x:auto;">
         <!-- hidden - diplays wine information -->
       </div>
     </div>
   </section>
+
   <!-- FORM -->
   <section id="form">
     <div class="container">
@@ -39,30 +39,29 @@
         <p>Name</p>
         <p>Type</p>
         <p>Year</p>
-        <p>Bought From</p>
-        <p>Today's Date</p>
+        <p>Rating</p>
         <button type="submit" class="button_1">Search</button>
       </div>
       <div class="input">
         <form>
           <br>
-          <input type="text" name="name" value=""><br>
+          <input id="nameField" type="text"  value=""><br>
           <br>
-          <input type="text" name="type" value=""><br>
+          <input id="typeField" type="text"  value=""><br>
           <br>
-          <input type="text" name="year" value=""><br>
-          <br>
-          <input type='text' name="from" value=""><br>
-          <br>
-          <input type="date" name="" value=""><br><br>
+          <input id="yearField" type="number"  value=""><br>
+          <div class="rating">
+            <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+          </div>
+          <div class="buttons">
+            <button type="submit" class="button_2">Add</button>
+          </div>
         </form>
-        <div class="buttons">
-          <button type="submit" class="button_2">Add</button>
-        </div>
       </div>
-
     </div>
   </section>
+
+  <!-- FOOTER -->
   <footer class="">
     <p>mBino, Copyright &copy; 2017</p>
   </footer>
@@ -71,5 +70,4 @@
   </script>
   <script type="text/javascript" src="./js/app.js"></script>
 </body>
-
 </html>
