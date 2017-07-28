@@ -10,6 +10,7 @@ $(document).ready(() => {
 })
 
 function getAll(data) {
+
   var content = $('#content')
   content.empty().append(`
     <table style="width:100%">
@@ -145,9 +146,8 @@ function addDeleteHandler() {
 
  function addPutHandler(url, data, callback, type) {
    $('.button_4').click(function(event) {
-     console.log(event);
      event.preventDefault()
-     let data = event.target.id
+     let data = event.target.body
      console.log(data);
          $.ajax({
           url: 'https://fav-wine-server.herokuapp.com/' + `${id}`,
