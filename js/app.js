@@ -14,10 +14,10 @@ function getAll(data) {
   content.empty().append(`
     <table style="width:100%">
       <tr>
-        <th>Name</th>
+        <th width="80px">Name</th>
         <th>Type</th>
-        <th>Year</th>
-        <th>Rating</th>
+        <th> Year</th>
+        <th width="30px">Rating</th>
         <th width="20px"></th>
         <th width="20px"></th>
       </tr>
@@ -30,11 +30,11 @@ if (wine) {
   content.append(`
     <table style="width:100%">
       <tr>
-        <td>${wine.name}</td>
+        <td width="80px">${wine.name}</td>
         <td>${wine.type}</td>
         <td>${wine.year}</td>
-        <td>${wine.rating}</td>
-        <td width="20px"><button class="button_4">✎</button></td>
+        <td  width="30px">${wine.rating}</td>
+        <td width="20px"><button id="${wine.id}" class="button_4">✎</button></td>
         <td width="20px"><button id="${wine.name}" class="button_3">✖︎</button></td>
       </tr>
     </table>`)
@@ -44,7 +44,7 @@ if (wine) {
 
 // GET Function
 
-search.addEventListener('click touchstart', searchField)
+search.addEventListener('click', searchField)
 
 function searchField(event) {
   event.preventDefault()
@@ -59,12 +59,12 @@ function searchForm(searching) {
     .then((data) => {
       var content = $('#content')
       content.empty().append(`
-        <table id="headerNames" style="width:100%">
+        <table style="width:100%">
           <tr>
-            <th>Name</th>
+            <th width="80px">Name</th>
             <th>Type</th>
-            <th>Year</th>
-            <th>Rating</th>
+            <th> Year</th>
+            <th width="30px">Rating</th>
             <th width="20px"></th>
             <th width="20px"></th>
           </tr>
@@ -77,12 +77,12 @@ function searchForm(searching) {
       content.append(`
         <table style="width:100%">
           <tr>
-            <td id="name_td">${wine.name}</td>
-            <td id="type_td">${wine.type}</td>
-            <td id="year_td">${wine.year}</td>
-            <td id="rating_td">${wine.rating}</td>
-            <td width="20px"><button id="${wine.id} "class="button_4">✎</button></td>
-            <td width="20px"><button id="${wine.name} "class="button_3">✖︎</button></td>
+            <td width="80px">${wine.name}</td>
+            <td>${wine.type}</td>
+            <td>${wine.year}</td>
+            <td  width="30px">${wine.rating}</td>
+            <td width="20px"><button id="${wine.id}" class="button_4">✎</button></td>
+            <td width="20px"><button id="${wine.name}" class="button_3">✖︎</button></td>
           </tr>
         </table>`)
         }
@@ -93,7 +93,7 @@ function searchForm(searching) {
 
 // POST Function
 
-form.addEventListener('click touchstart', submitForm)
+form.addEventListener('click', submitForm)
 
 function submitForm(event) {
   event.preventDefault()
@@ -128,7 +128,7 @@ function submitForm(event) {
  // DELETE FUNCTION
 
 function addDeleteHandler() {
-  $('.button_3').on('click touchstart', function(event) {
+  $('.button_3').click(function(event) {
     event.preventDefault()
     let name = event.target.id;
     $.ajax({
@@ -141,29 +141,20 @@ function addDeleteHandler() {
   })
 }
 
-
-
  // PUT Function
 
- // function addPutHandler() {
- //   $('.button_4').on('click touchstart', function(event) {
- //     event.preventDefault()
- //     $.get(url + '?' + 'search=' + `${id}`)
- //      .then((data) => {
- //        data.id = {
- //          name: $('#name_td').val() === " " ? undefined : $('#name_td').val(),
- //          type: $('#type_td').val() === " " ? undefined : $('#type_td').val(),
- //          year: $('#year_td').val() === " " ? undefined : $('#year_td').val(),
- //          rating: $('#rating_td').val() === " " ? undefined : $('#rating_td').val()
- //        }
- //      })
- //     $.ajax({
- //       url: 'https://fav-wine-server.herokuapp.com/' + `${id}`,
- //       type: 'PUT',
- //       data: data
- //       success: function(result) {
- //         $.get(url).then(getAll)
- //       }
- //     })
- //   })
- // }
+ function addPutHandler(url, data, callback, type) {
+   $('.button_4').click(function(event) {
+     console.log(event);
+     event.preventDefault()
+     let data = event.target.id
+     console.log(data);
+         $.ajax({
+          url: 'https://fav-wine-server.herokuapp.com/' + `${id}`,
+          type: 'PUT',
+          success: callback,
+          data: data,
+          contentType: type
+        });
+    })
+ }
