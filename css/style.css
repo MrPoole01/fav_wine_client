@@ -1,4 +1,12 @@
 /* Global */
+html {
+	background-color: #000000;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 body {
   font: 15px Arial, sans-serif;
@@ -68,7 +76,7 @@ th, td {
 
 #form {
   position: relative;
-  margin-top: -70px;
+  margin-top: -170px;
 }
 
 #info {
