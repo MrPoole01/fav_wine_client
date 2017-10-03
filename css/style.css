@@ -6,7 +6,8 @@ body {
   margin: 0;
   background-color: #e8e8e8;
   display: flex;
-  min-height: 100vh;
+  max-width: 414px;
+  max-height: 736px;
   flex-direction: column;
 }
 

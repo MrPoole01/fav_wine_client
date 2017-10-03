@@ -1,4 +1,5 @@
-var url = 'https://fav-wine-server.herokuapp.com/';
+var url = 'http://localhost:8080/'
+// var url = 'https://fav-wine-server.herokuapp.com/';
 
 const search = document.querySelector('.button_1')
 const form = document.querySelector('.button_2')
@@ -7,6 +8,7 @@ $(document).ready(() => {
   $.get(url)
     .then(getAll)
     .then(addDeleteHandler)
+    .then(addPutHandler)
 })
 
 function getAll(data) {
@@ -42,6 +44,7 @@ if (wine) {
     }
   }
 }
+
 
 // GET Function
 
@@ -134,7 +137,7 @@ function addDeleteHandler() {
     let name = event.target.id;
     $.ajax({
       url: 'https://fav-wine-server.herokuapp.com/' + `${name}`,
-      type: 'DELETE',
+      method: 'DELETE',
       success: function(result) {
         $.get(url).then(getAll)
       }
@@ -144,17 +147,31 @@ function addDeleteHandler() {
 
  // PUT Function
 
- function addPutHandler(url, data, callback, type) {
+ function addPutHandler(name, type, year, rating) {
    $('.button_4').click(function(event) {
      event.preventDefault()
-     let data = event.target.body
-     console.log(data);
+     let id = event.target.id
+     let name = $('#nameField').val()
+     let type = $('#typeField').val()
+     let year = $('#yearField').val()
+     let rating = $('#ratingField').val()
+
+     let data = {
+       name: name === "" ? undefined : name,
+       type: type === "" ? undefined : type,
+       year: year === "" ? undefined : year,
+       rating: rating === "" ? undefined : rating
+     }
+     console.log(url + id);
          $.ajax({
-          url: 'https://fav-wine-server.herokuapp.com/' + `${id}`,
-          type: 'PUT',
-          success: callback,
+          url: url + id,
+          method: 'PUT',
           data: data,
-          contentType: type
+          success: function(result) {
+            $.get(url).then(getAll)
+            .then(addDeleteHandler)
+            .then(addPutHandler)
+          },
         });
     })
  }
