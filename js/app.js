@@ -20,7 +20,7 @@ function getAll(data) {
         <th width="80px">Name</th>
         <th>Type</th>
         <th> Year</th>
-        <th width="50px">Rating</th>
+        <th width="30px">Rating</th>
         <th width="20px"></th>
         <th width="20px"></th>
       </tr>
@@ -33,7 +33,7 @@ if (wine) {
   content.append(`
     <table style="width:100%">
       <tr>
-        <td width="80px">${wine.name}</td>
+        <td width="50px">${wine.name}</td>
         <td>${wine.type}</td>
         <td>${wine.year}</td>
         <td  width="30px">${wine.rating}</td>
