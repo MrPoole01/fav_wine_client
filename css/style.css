@@ -59,7 +59,7 @@ header h5 {
   margin-bottom: -50px;
 }
 
-.wineglass {
+img {
   margin-top: 10px;
 }
 
@@ -126,6 +126,10 @@ input {
   margin-left: 60px;
   border: none;
   outline:none;
+}
+
+.button_3 {
+  margin-left: -10px;
 }
 
 /* Footer */
