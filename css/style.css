@@ -14,7 +14,7 @@ body {
   margin: 0;
   background-color: #e8e8e8;
   display: flex;
-  max-width: 414px;
+  max-width: 514px;
   max-height: 736px;
   flex-direction: column;
 }
