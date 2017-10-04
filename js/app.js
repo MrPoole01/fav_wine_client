@@ -33,10 +33,10 @@ if (wine) {
   content.append(`
     <table style="width:100%">
       <tr>
-        <td width="50px">${wine.name}</td>
+        <td width="80px">${wine.name}</td>
         <td>${wine.type}</td>
         <td>${wine.year}</td>
-        <td  width="30px">${wine.rating}</td>
+        <td  width="50px">${wine.rating}</td>
         <td width="20px"><button id="${wine.id}" class="button_4">✎</button></td>
         <td width="20px"><button id="${wine.name}" class="button_3">✖︎</button></td>
       </tr>
