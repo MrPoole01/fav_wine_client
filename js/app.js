@@ -1,5 +1,5 @@
-var url = 'http://localhost:8080/'
-// var url = 'https://fav-wine-server.herokuapp.com/';
+// var url = 'http://localhost:8080/'
+var url = 'https://fav-wine-server.herokuapp.com/';
 
 const search = document.querySelector('.button_1')
 const form = document.querySelector('.button_2')
