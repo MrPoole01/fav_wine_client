@@ -19,8 +19,8 @@ function getAll(data) {
       <tr>
         <th width="80px">Name</th>
         <th>Type</th>
-        <th width="10px"> Year</th>
-        <th width="30px">Rating</th>
+        <th> Year</th>
+        <th width="10px">Rating</th>
         <th width="20px"></th>
         <th width="20px"></th>
       </tr>
