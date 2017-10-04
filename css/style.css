@@ -78,7 +78,7 @@ th, td {
 
 #form {
   position: relative;
-  margin-top: -170px;
+  margin-top: -150px;
 }
 
 #info {
@@ -135,6 +135,6 @@ input {
 /* Footer */
 
 footer p {
-  margin-top: 30px;
+  margin-top: 10px;
   text-align: center;
 }
