@@ -29,6 +29,3 @@ Link to Live site => https://fav-wine-app.firebaseapp.com/
 - knex migrate:latest --env production
 - knex seed:run --env production
 
-Link to ERD: https://www.lucidchart.com/invitations/accept/ad375da0-adc8-4182-a81d-c5ee561705c5
-
-Link to Wireframe: https://image.prntscr.com/image/l_2cDCgiQI_kjku6oscjSQ.png
